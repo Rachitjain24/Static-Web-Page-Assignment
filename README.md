@@ -1,5 +1,3 @@
-# Static-Web-Page-Assignment
-Personal Webpage  A lightweight, self‑contained personal information web page built with plain HTML and CSS. It demonstrates local file hosting, styling, and network capture for privacy verification.
 # Personal Webpage
 
 A lightweight, self‑contained personal information web page built with plain HTML and CSS. It demonstrates local file hosting, styling, and network capture for privacy verification.
@@ -21,7 +19,50 @@ personal_webpage/
 - A modern web browser (Chrome, Firefox, Edge, etc.)
 - (Optional) VS Code with the Remote – WSL extension for editing
 
-## Installation & Setup
+## Code Overview
+
+### `index.html`
+
+- **DOCTYPE & meta**: HTML5 document with UTF-8 charset for wide character support.
+- **Link to CSS**: `<link rel="stylesheet" href="styles.css">` ensures separation of concerns.
+- **Header Section**: Contains `<h1>` with the page title.
+- **Profile Image**: Wrapped in a `<section>` with an `<img>` tag sourcing `profile.jpg`.
+- **Contact Info**: Uses `<section>` and semantic `<h2>` and `<p>` tags; includes address, phone, email, and Matrix ID.
+
+Example snippet:
+```html
+<section id="contact-info">
+  <h2>Contact Information</h2>
+  <p><strong>Address:</strong> 123 Main Street, Berlin, Germany</p>
+  <p><strong>Phone:</strong> +49 30 1234567</p>
+  <p><strong>Email:</strong> jane.doe@example.com</p>
+  <p><strong>Matrix ID:</strong> @janedoe:matrix.org</p>
+</section>
+```
+
+### `styles.css`
+
+- **Global Styles**: Defines font stack, background gradient, and base color.
+- **Header Styling**: Background color, text centering, shadows, and typography enhancements.
+- **Image Effects**: Circular cropping, border, shadow, and scale-on-hover transitions.
+- **Contact Card**: Centered container with padding, rounded corners, hover shadow effect, and responsive width.
+- **Responsive Breakpoints**: Adjusts header font size and padding for screens ≤600px.
+
+Example snippet:
+```css
+#profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#profile-pic img:hover {
+    transform: scale(1.05);
+}
+```
+
+## Installation & Setup & Setup
 
 1. **Clone or download** this repository to your local machine:
    ```bash
